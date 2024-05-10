@@ -43,7 +43,7 @@ const Layout2: React.FC = () => {
       console.log(response.data);
       setIsSuccess((prev) => !prev);
     } catch (error) {
-      console.error('Error:', error.response?.data);
+      console.error('Error');
     }
     setIsModalOpen(false); // Close modal after submission
   };
@@ -58,7 +58,7 @@ const Layout2: React.FC = () => {
           );
           setFormData(response?.data);
         } catch (error) {
-          console.error('Error fetching data:', error?.response?.data);
+          console.error('Error fetching data');
         }
       };
       fetchData();
