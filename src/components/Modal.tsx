@@ -3,10 +3,21 @@ import ReactModal from 'react-modal';
 
 interface Props {
   formData: {
+    _id: string;
+    componentType: string;
+    addCount: number;
+    updateCount: number;
     title: string;
     content: string;
   };
-  setFormData: (formData: { title: string; content: string }) => void;
+  setFormData: (formData: {
+    _id: string;
+    componentType: string;
+    addCount: number;
+    updateCount: number;
+    title: string;
+    content: string;
+  }) => void;
   handleSubmission: (e: React.FormEvent<HTMLFormElement>) => void;
   isAdd: boolean; // Add this to distinguish between add and update modes
   onClose: () => void;
